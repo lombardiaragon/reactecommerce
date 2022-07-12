@@ -1,0 +1,16 @@
+.ShopInfo{
+    .ShopInfo__list{
+        padding: 1em;
+        margin: 1em;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $naranja;
+        border-radius: 50px;
+        .ShopInfo__list__item{
+            list-style: none;
+            span{
+                margin-left: .5em;
+            }
+        }
+    }
+}
