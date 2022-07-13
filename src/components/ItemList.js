@@ -1,8 +1,15 @@
 import Item from "./Item"
-const ItemList=({product})=>{
+const ItemList=({myProducts})=>{
+
+    console.log(myProducts)
     return(
         <div className="ItemList">
-            <Item product={product}/>
+            {myProducts.map((product)=>{
+                return(
+                    <Item key={product.id} product={product}/>
+                )
+            })
+        }
         </div>
     )
 }

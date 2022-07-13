@@ -1,5 +1,5 @@
 import { collection,getDocs,getDoc,doc } from "firebase/firestore";
-import db from '../utils/firebaseConfig'
+import db from "../Utils/FireBase.config";
 
 const getProducts = async() =>{
     const itemsCollection=collection(db, "productos")
@@ -27,8 +27,6 @@ const getProduct=async(id)=>{
         return error
     }
 }
-
-
 
 export default getProducts
 export {getProduct}
