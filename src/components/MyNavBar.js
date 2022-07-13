@@ -11,7 +11,10 @@ import { useState } from 'react';
 
 const MyNavBar=()=>{
     const[showCartWidget,setShowCartWidget]=useState(false)
-
+    const toggleMyDrawer=(e)=>{
+        setShowCartWidget(!showCartWidget)
+        console.log(showCartWidget)
+    }
     return(
         <>
         <Navbar bg="dark" variant='dark' expand="lg">
@@ -37,7 +40,7 @@ const MyNavBar=()=>{
                         <Nav.Link>Contacto</Nav.Link>
                     </Nav>
                     <Nav className='w-50 d-flex align-items-center justify-content-end'>
-                        <Nav.Link className='d-flex align-items-center' onClick={()=>setShowCartWidget(!showCartWidget)}>
+                        <Nav.Link className='d-flex align-items-center' onClick={toggleMyDrawer}>
                             <FontAwesomeIcon icon={faCartArrowDown} className='mx-1'/>Mi Carrito
                         </Nav.Link>
                         <Nav.Link><FontAwesomeIcon icon={faUser} className='mx-1'/>Mi Perfil</Nav.Link>
@@ -54,7 +57,7 @@ const MyNavBar=()=>{
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-        {showCartWidget && <CartWidget showCartWidget={showCartWidget} setShowCartWidget={setShowCartWidget}/>  }
+        <CartWidget toggleMyDrawer={toggleMyDrawer} showCartWidget={showCartWidget}/>
         </>
         )
 }
