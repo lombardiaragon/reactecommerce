@@ -13,29 +13,32 @@ import Help from './Pages/Help';
 import Cart from './Pages/Cart';
 import Detail from './Pages/Detail';
 import ItemListContainer from './components/ItemListContainer';
+import { CartProvider } from './Context/CartContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <MainContainerLayout>
-        <HeaderLayout>
-          <MyNavBar/>
-        </HeaderLayout>
-        <MainContentLayout>
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/productos/:category' element={<ItemListContainer/>}/>
-            <Route path='/contacto' element={<Contact/>}/>
-            <Route path='/item/:id' element={<Detail/>}/>
-            <Route path='/ayuda' element={<Help/>}/>
-            <Route path='/miperfil' element={<UserProfile/>}/>
-            <Route path='/carrito' element={<Cart/>}/>
-            <Route path='*' element={<NotFound/>}/>
-          </Routes>
-        </MainContentLayout>
-        <FooterLayout/>
-      </MainContainerLayout>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <MainContainerLayout>
+          <HeaderLayout>
+            <MyNavBar/>
+          </HeaderLayout>
+          <MainContentLayout>
+            <Routes>
+              <Route path='/' element={<Home/>}/>
+              <Route path='/productos/:category' element={<ItemListContainer/>}/>
+              <Route path='/contacto' element={<Contact/>}/>
+              <Route path='/item/:id' element={<Detail/>}/>
+              <Route path='/ayuda' element={<Help/>}/>
+              <Route path='/miperfil' element={<UserProfile/>}/>
+              <Route path='/carrito' element={<Cart/>}/>
+              <Route path='*' element={<NotFound/>}/>
+            </Routes>
+          </MainContentLayout>
+          <FooterLayout/>
+        </MainContainerLayout>
+      </BrowserRouter>
+    </CartProvider>
   )
 }
 

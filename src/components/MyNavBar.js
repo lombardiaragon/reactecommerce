@@ -29,7 +29,7 @@ const MyNavBar=()=>{
                     style={{ maxHeight: '100px' }}
                     navbarScroll
                     >
-                        <Nav.Link>Home</Nav.Link>
+                        <Link to={'/'} className='text-decoration-none nav-link'>Home</Link>
                         <NavDropdown title="Productos" id="navbarScrollingDropdown">
                             <Link to={'productos/remeras'} className='text-decoration-none text-dark dropdown-item'>
                                 <p className='mb-0 px-2'>
@@ -53,14 +53,14 @@ const MyNavBar=()=>{
                                 </p>
                             </Link> 
                         </NavDropdown>
-                        <Nav.Link>Ayuda</Nav.Link>
-                        <Nav.Link>Contacto</Nav.Link>
+                        <Link to={'/ayuda'} className='text-decoration-none nav-link'>Ayuda</Link>
+                        <Link to={'/contacto'} className='text-decoration-none nav-link'>Contacto</Link>
                     </Nav>
                     <Nav className='w-50 d-flex align-items-center justify-content-end'>
                         <Nav.Link className='d-flex align-items-center' onClick={toggleMyDrawer}>
                             <FontAwesomeIcon icon={faCartArrowDown} className='mx-1'/>Mi Carrito
                         </Nav.Link>
-                        <Nav.Link><FontAwesomeIcon icon={faUser} className='mx-1'/>Mi Perfil</Nav.Link>
+                        <Link to={'/'} className='text-decoration-none nav-link'><FontAwesomeIcon icon={faUser} className='mx-1'/>Mi Perfil</Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

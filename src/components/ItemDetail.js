@@ -1,5 +1,11 @@
+import ItemCount from "./ItemCount"
+// import CartContext from "../Context/CartContext"
+// import { useContext } from "react"
+
 const ItemDetail=({product})=>{
-    const{title,pictureUrl,price}=product
+    // const{addToCart}=useContext(CartContext)
+    const{title,pictureUrl,price,stock}=product
+
     return(
         <div className="ItemDetail d-flex justify-content-between bg-light m-5 img-thumbnail shadow-sm p-5 ">
             <div className="ItemDetail__imgContainer w-50 d-flex justify-content-center p-4">
@@ -11,26 +17,27 @@ const ItemDetail=({product})=>{
                     <span className="col my-3">${price} / reviews</span>
                     <p className="col">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed o consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dour sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                 </div>
-                <div className="row container">
-                    <form className='formSizes row'>
+                <div className="row d-flex flex-row justify-content-between m-0 p-0 w-100">
+                    <form className='mb-1 ms-3 p-0 w-50'>
+                        <label className="mb-1">Color</label>
+                        <select className='form-select m-auto' name="colors">
+                            <option value="azul">Azul</option>
+                            <option value="blanco">Blanco</option>
+                            <option value="negro">Negro</option>
+                        </select>
+                    </form>
+                    <form className=' m-0 p-0 me-3 w-25'>
                         <label className="mb-1">Talle</label>
-                        <select className='selectSizes form-select m-auto' name="sizes">
+                        <select className='form-select m-auto' name="sizes">
                             <option value="small">S</option>
                             <option value="medium">M</option>
                             <option value="large">L</option>
                             <option value="extralarge">XL</option>
                         </select>
                     </form>
-                    <form className='formColors row mt-3'>
-                        <label className="mb-1">Color</label>
-                        <select className='selectColors form-select m-auto' name="colors">
-                            <option value="azul">Azul</option>
-                            <option value="blanco">Blanco</option>
-                            <option value="negro">Negro</option>
-                        </select>
-                    </form>
                 </div>
-                <button type='button' className="btn btn-warning row w-100 m-auto mt-5">Agregar al Carrito</button>
+                <ItemCount stock={stock} product={product}/>
+                {/* <button type='button' className="btn btn-warning row w-100 m-auto mt-4" onClick={()=>addToCart(product)}>Agregar al Carrito</button> */}
 
             </div>
         </div>
