@@ -8,7 +8,7 @@ const Item=({product})=>{
         <Link to={`/item/${id}`} className='text-decoration-none text-dark'>
             <div className="ItemContainer" onMouseEnter={()=>setShowBuyingBtn(!showBuyingBtn)}>
                 <div className="ItemContainer__divImg">
-                    <img className="ItemContainer__divImg__img" src={pictureUrl} alt='product'/>
+                    <img className="ItemContainer__divImg__img" src={`/${pictureUrl}`} alt='product'/>
                 </div>
                 <div className="ItemContainer__divInfo my-3 d-flex flex-column">
                     <h4 className="ItemContainer__divInfo__title h5">{title}</h4>

@@ -10,12 +10,12 @@ const ItemListContainer=()=>{
     useEffect(()=>{
         getProducts()
         .then((res)=>{
-            category? setMyProducts(res.filter((el)=>el.category===category)):setMyProducts(res)
+            category? (setMyProducts(res.filter((el)=>el.category===category))) : setMyProducts(res)
         })
-    },[])
-
+    },[category])
+    console.log('myProducts', myProducts)
     return(
-        <div>
+        <div className="p-0">
             <ItemList myProducts={myProducts}/>
         </div>
     )

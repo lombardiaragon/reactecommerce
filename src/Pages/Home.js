@@ -4,11 +4,11 @@ import SlideBanner from "../components/SlideBanner"
 
 const Home =()=>{
     return(
-        <div>
+        <>
             <SlideBanner/>
             <ShopInfo/>
             <ItemListContainer/>
-        </div>
+        </>
 
     )
 }

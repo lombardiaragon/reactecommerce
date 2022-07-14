@@ -5,7 +5,7 @@ import {faTruckFast,faShop,faCreditCard,faCommentDollar} from '@fortawesome/free
 
 const ShopInfo=()=>{
     return(
-        <div className='ShopInfo'>
+        <div className='ShopInfo p-0'>
             <ul className='ShopInfo__list'>
                 <li className='ShopInfo__list__item'><FontAwesomeIcon icon={faShop} /><span>Nuestra Tienda</span></li>
                 <li className='ShopInfo__list__item'><FontAwesomeIcon icon={faCreditCard} /><span>Todas las tarjetas</span></li>
