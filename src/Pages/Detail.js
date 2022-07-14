@@ -1,6 +1,8 @@
+import ItemDetailContainer from "../components/ItemDetailContainer"
+
 const Detail =()=>{
     return(
-        <div>Detail</div>
+        <ItemDetailContainer/>
     )
 }
 export default Detail

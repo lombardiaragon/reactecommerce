@@ -1,6 +1,6 @@
 const HeaderLayout=({children})=>{
     return(
-        <header>
+        <header className="row">
             {children}
         </header>
     )

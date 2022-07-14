@@ -1,6 +1,6 @@
 const MainContentLayout=({children})=>{
     return(
-        <main>
+        <main className="row">
             {children}
         </main>
     )

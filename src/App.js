@@ -12,6 +12,7 @@ import Contact from './Pages/Contact';
 import Help from './Pages/Help';
 import Cart from './Pages/Cart';
 import Detail from './Pages/Detail';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
         <MainContentLayout>
           <Routes>
             <Route path='/' element={<Home/>}/>
+            <Route path='/productos/:category' element={<ItemListContainer/>}/>
             <Route path='/contacto' element={<Contact/>}/>
-            <Route path='/detalle' element={<Detail/>}/>
+            <Route path='/item/:id' element={<Detail/>}/>
             <Route path='/ayuda' element={<Help/>}/>
             <Route path='/miperfil' element={<UserProfile/>}/>
             <Route path='/carrito' element={<Cart/>}/>

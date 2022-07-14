@@ -1,23 +1,19 @@
 import ItemList from "./ItemList"
 import getProducts from "../Services/products.services"
 import { useEffect,useState } from "react"
+import { useParams } from "react-router-dom"
 
 const ItemListContainer=()=>{
     const[myProducts,setMyProducts]=useState([])
-    // const product={
-    //     title:'remera',
-    //     price:1500,
-    //     description:'remera hombre',
-    //     image:'./tienda2.jpg'
-    // }
+    const{category}=useParams()
+
     useEffect(()=>{
         getProducts()
         .then((res)=>{
-            setMyProducts(res)
+            category? setMyProducts(res.filter((el)=>el.category===category)):setMyProducts(res)
         })
     },[])
 
-    console.log(myProducts)
     return(
         <div>
             <ItemList myProducts={myProducts}/>

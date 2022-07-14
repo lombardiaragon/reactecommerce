@@ -17,24 +17,41 @@ const MyNavBar=()=>{
     }
     return(
         <>
-        <Navbar bg="dark" variant='dark' expand="lg">
+        <Navbar bg="dark" variant='dark' expand="lg" className='p-2'>
             <Container fluid>
-                <Link to={'/'}>
+                <Link to={'/'}  className='text-decoration-none'>
                     <Navbar.Brand>MI LOGO</Navbar.Brand>
                 </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
-                    className="me-auto my-2 my-lg-0"
+                    className="me-auto my-2 my-lg-0 "
                     style={{ maxHeight: '100px' }}
                     navbarScroll
                     >
                         <Nav.Link>Home</Nav.Link>
                         <NavDropdown title="Productos" id="navbarScrollingDropdown">
-                            <NavDropdown.Item >Remeras</NavDropdown.Item>
-                            <NavDropdown.Item >Buzos</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item>OnSale</NavDropdown.Item>
+                            <Link to={'productos/remeras'} className='text-decoration-none text-dark dropdown-item'>
+                                <p className='mb-0 px-2'>
+                                Remeras 
+                                </p>
+                            </Link> 
+                            <Link to={'productos/buzos'} className='text-decoration-none text-dark dropdown-item'>
+                                <p className='mb-0 px-2'>
+                                Buzos 
+                                </p>
+                            </Link> 
+                            <Link to={'productos/pantalones'} className='text-decoration-none text-dark dropdown-item'>
+                                <p className='mb-0 px-2'>
+                                Pantalones 
+                                </p>
+                            </Link> 
+                            <hr className="dropdown-divider"/>
+                            <Link to={'productos/pantalones'} className='text-decoration-none text-dark dropdown-item'>
+                                <p className='mb-0 px-2'> 
+                                On Sale 
+                                </p>
+                            </Link> 
                         </NavDropdown>
                         <Nav.Link>Ayuda</Nav.Link>
                         <Nav.Link>Contacto</Nav.Link>
@@ -45,15 +62,6 @@ const MyNavBar=()=>{
                         </Nav.Link>
                         <Nav.Link><FontAwesomeIcon icon={faUser} className='mx-1'/>Mi Perfil</Nav.Link>
                     </Nav>
-                    {/* <Form className="d-flex">
-                    <Form.Control
-                        type="search"
-                        placeholder="Search"
-                        className="me-2"
-                        aria-label="Search"
-                    />
-                    <Button variant="outline-light">Search</Button>
-                    </Form> */}
                 </Navbar.Collapse>
             </Container>
         </Navbar>

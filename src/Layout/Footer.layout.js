@@ -1,6 +1,6 @@
 const FooterLayout=()=>{
     return(
-        <footer className="FooterLayout py-3 mt-4 bg-dark text-white">
+        <footer className="FooterLayout row py-3 mt-4 bg-dark text-white">
             <ul className="FooterLayout__list nav d-flex justify-content-around border-bottom pb-3 mb-3">
                 <li className="FooterLayout__list__link">HOME</li>
                 <li className="FooterLayout__list__link">FAQS</li>

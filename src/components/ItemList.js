@@ -1,7 +1,6 @@
 import Item from "./Item"
 const ItemList=({myProducts})=>{
 
-    console.log(myProducts)
     return(
         <div className="ItemList">
             {myProducts.map((product)=>{

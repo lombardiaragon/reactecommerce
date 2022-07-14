@@ -4,15 +4,17 @@ const CartWidget=({toggleMyDrawer,showCartWidget})=> {
 
   return (
        <>
-        {showCartWidget && <div className='MyDrawerContainer' onClick={toggleMyDrawer}>MYDRAWER PANTALLA COMPLETA</div>}
-        <div className={`MyDrawer ${showCartWidget && "MyDrawerActive"}`}>
-            <div className="MyDrawer__title">
-                <h3>TITULO DRAWER</h3>
+        {showCartWidget && <div className='MyDrawerContainer' onClick={toggleMyDrawer}/>}
+        <div className={`MyDrawer text-dark bg-light w-25 ${showCartWidget && "MyDrawerActive"}`}>
+            <div className="mt-5 p-3">
+                <div>
+                    <h3>TITULO DRAWER</h3>
+                </div>
+                <div>
+                    <p>Info Drawer</p>
+                </div>
             </div>
-            <div className='MyDrawer__info'>
-                <p>Info Drawer</p>
-            </div>
-            <button className='MyDrawerClose' onClick={toggleMyDrawer}><span>X</span></button>
+            <button type="button" className="btn-close MyDrawerClose" aria-label="Close" onClick={toggleMyDrawer}></button>
         </div>     
         </>
    
