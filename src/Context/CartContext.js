@@ -8,11 +8,15 @@ const CartProvider=({children})=>{
     const addToCart=(product)=>{
         setCartList([...cartList,product])
     }
+    const quitFromCart=(item)=>{
+        setCartList(cartList.filter((el)=>el.id !== item.id))
+    }
 
     const data={
         cartList,
         setCartList,
-        addToCart
+        addToCart,
+        quitFromCart
     }
     console.log(cartList)
 

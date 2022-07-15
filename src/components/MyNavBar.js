@@ -26,7 +26,7 @@ const MyNavBar=()=>{
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
                     className="me-auto my-2 my-lg-0 "
-                    style={{ maxHeight: '100px' }}
+                    style={{ maxHeight: '220px' }}
                     navbarScroll
                     >
                         <Link to={'/'} className='text-decoration-none nav-link'>Home</Link>
@@ -56,7 +56,7 @@ const MyNavBar=()=>{
                         <Link to={'/ayuda'} className='text-decoration-none nav-link'>Ayuda</Link>
                         <Link to={'/contacto'} className='text-decoration-none nav-link'>Contacto</Link>
                     </Nav>
-                    <Nav className='w-50 d-flex align-items-center justify-content-end'>
+                    <Nav className='w-100 d-flex align-items-center justify-content-end'>
                         <Nav.Link className='d-flex align-items-center' onClick={toggleMyDrawer}>
                             <FontAwesomeIcon icon={faCartArrowDown} className='mx-1'/>Mi Carrito
                         </Nav.Link>
