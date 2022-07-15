@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import { Button } from "react-bootstrap";
 
 const Item=({product})=>{
     const{title,price,id,pictureUrl}=product
@@ -13,10 +14,8 @@ const Item=({product})=>{
                 <div className="ItemContainer__divInfo my-3 d-flex flex-column">
                     <h4 className="ItemContainer__divInfo__title h5">{title}</h4>
                     <span className="ItemContainer__divInfo__price h6">${price}</span>
-                    <button type='button' className="btn btn-warning">Agregar al Carrito</button>
-
+                    <Button type='button' className="btn btn-warning">Agregar al Carrito</Button>
                 </div>
-              
             </div>
         </Link>
     )

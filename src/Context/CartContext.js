@@ -12,11 +12,15 @@ const CartProvider=({children})=>{
         setCartList(cartList.filter((el)=>el.id !== item.id))
     }
 
+    const mapPrices=cartList.map((el)=>el.price*el.quantity)
+    const totalAcc=mapPrices.reduce((acc,price)=>acc+price,0)
+
     const data={
         cartList,
         setCartList,
         addToCart,
-        quitFromCart
+        quitFromCart,
+        totalAcc
     }
     console.log(cartList)
 

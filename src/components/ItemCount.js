@@ -1,6 +1,7 @@
 import { useState } from "react"
 import CartContext from "../Context/CartContext"
 import { useContext } from "react"
+import { Button } from "react-bootstrap"
 
 const ItemCount=({stock,product})=>{
     const{addToCart}=useContext(CartContext)
@@ -19,13 +20,13 @@ const ItemCount=({stock,product})=>{
     return(
         <>
         <div className="mt-4 d-flex justify-content-center align-items-center">
-            <button type="button" className="btn btn-outline-dark" onClick={toRest} disabled={quantity===1}>-</button>
+            <Button type="button" className="btn-dark" onClick={toRest} disabled={quantity===1}>-</Button>
             <span className="mx-3">{quantity}</span>
-            <button type="button" className="btn btn-outline-dark" onClick={toAdd}>+</button>
+            <Button type="button" className="btn-dark" onClick={toAdd}>+</Button>
         </div>
-        <button type='button' className="btn btn-warning row w-100 m-auto mt-4" onClick={()=>addToCart(product)}>
+        <Button type='button' className="btn btn-warning row w-100 m-auto mt-4" onClick={()=>addToCart(product)}>
             Agregar al Carrito
-        </button>
+        </Button>
         </>
     )
 }
