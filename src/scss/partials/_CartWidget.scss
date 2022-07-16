@@ -5,7 +5,7 @@
   left: 0;
   z-index: 1040;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #000;
   transition:opacity .15s linear;
 }
@@ -14,7 +14,7 @@
   min-width: 450px;
   top: 0;
   right: 0;
-  height: 100vh;
+  min-height: 100vh;
   z-index: 1045;
   display: flex;
   flex-direction: column;
@@ -29,17 +29,17 @@
   transform: none;
   transition: transform .3s ease-in-out;
 }
-.MyDrawerClose{
-  padding: .5em;
-  margin: .5em;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
+// .MyDrawerClose{
+//   padding: .5em;
+//   margin: .5em;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 30px;
+//   height: 30px;
+//   font-size: 20px;
 
-}
+// }
 
 
 .cartWidgetItems{

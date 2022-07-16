@@ -14,9 +14,11 @@ import Cart from './Pages/Cart';
 import Detail from './Pages/Detail';
 import ItemListContainer from './components/ItemListContainer';
 import { CartProvider } from './Context/CartContext';
+import { CounterProvider } from './Context/CounterContext';
 
 function App() {
   return (
+    <CounterProvider>
     <CartProvider>
       <BrowserRouter>
         <MainContainerLayout>
@@ -39,6 +41,7 @@ function App() {
         </MainContainerLayout>
       </BrowserRouter>
     </CartProvider>
+    </CounterProvider>
   )
 }
 

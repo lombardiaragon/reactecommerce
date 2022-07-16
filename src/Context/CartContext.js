@@ -11,8 +11,8 @@ const CartProvider=({children})=>{
     const quitFromCart=(item)=>{
         setCartList(cartList.filter((el)=>el.id !== item.id))
     }
-
-    const mapPrices=cartList.map((el)=>el.price*el.quantity)
+    console.log(cartList)
+    const mapPrices=cartList.map((el)=>el.price*el.quantitySelected)
     const totalAcc=mapPrices.reduce((acc,price)=>acc+price,0)
 
     const data={

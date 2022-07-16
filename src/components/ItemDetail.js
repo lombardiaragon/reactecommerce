@@ -4,7 +4,7 @@ import InfoItemDetail from "./InfoItemDetail"
 import FormItemDetail from "./FormItemDetail"
 
 const ItemDetail=({product})=>{
-    const{title,pictureUrl,price,stock}=product
+    const{title,pictureUrl,price}=product
 
     return(
         <>
@@ -15,7 +15,7 @@ const ItemDetail=({product})=>{
             <div className=" w-50 container p-4">
                 <InfoItemDetail title={title} price={price}/>
                 <FormItemDetail/>
-                <ItemCount stock={stock} product={product}/>
+                <ItemCount product={product}/>
             </div>
         </div>
         <SliderProducts/>

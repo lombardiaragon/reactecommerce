@@ -16,8 +16,9 @@ const CartWidget=({toggleMyDrawer,showCartWidget})=> {
                     <span className="w-75 h4">MI CARRITO</span>
                     <Button type="button" className="h6 btn-close btn-close-white" aria-label="Close" onClick={toggleMyDrawer}></Button>
                 </div>
+                {cartList.length===0 && <span className="h5">Carrito vacío</span>}
                 {cartList.map((item)=>{
-                    const{title,pictureUrl,id,price,quantity}=item
+                    const{title,pictureUrl,id,price,quantitySelected}=item
                     return(
                     <div key={id} className='cartWidgetItems text-center align-items-stretch'>
                         <div className='cartWidgetItems__divImg'>
@@ -26,7 +27,7 @@ const CartWidget=({toggleMyDrawer,showCartWidget})=> {
                         <div className='cartWidgetItems__divInfo ms-3 d-flex justify-content-center flex-column  align-items-start w-50'>
                             <p className=" m-0">{title}</p>
                             <span>
-                                <Badge bg="secondary">Cantidad: {quantity}</Badge>
+                                <Badge bg="secondary">Cantidad: {quantitySelected}</Badge>
                             </span>
                         </div>
                         <div className="flex-grow-1 position-relative d-flex flex-column align-items-start justify-content-center">
@@ -34,7 +35,7 @@ const CartWidget=({toggleMyDrawer,showCartWidget})=> {
                             className="h6 btn btn-outline-dark btn-close position-absolute top-0 end-0" aria-label="Close">
                             </Button>
                             <span >Total</span>
-                            <span > ${price*quantity}</span>
+                            <span > ${price*quantitySelected}</span>
                         </div>
                     </div>
                     )}
@@ -42,7 +43,7 @@ const CartWidget=({toggleMyDrawer,showCartWidget})=> {
                 <div className="mt-5 card p-3">
                     <span className="text-center">Subtotal: ${totalAcc}</span>
                     <Link to={'./carrito'} className='text-decoration-none text-dark '>
-                        <Button type="button" className="btn btn-secondary mt-2 w-100">
+                        <Button type="button" className="btn btn-secondary mt-2 w-100" onClick={toggleMyDrawer}>
                             Terminar compra
                         </Button>
                     </Link>

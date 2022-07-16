@@ -1,0 +1,17 @@
+.cartCards{
+    width: 50vw;
+    max-height: 300px;
+    .cartCards__img{
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .cartCards__info{
+        width: 60%;
+        height: 100%;
+    }
+}
+.cardResume{
+    width: 40vw;
+    max-height: 250px;
+}
