@@ -8,7 +8,6 @@ const CartWidgetProvider=({children})=>{
     
     const toggleMyDrawer=(e)=>{
         setShowCartWidget(!showCartWidget)
-        console.log(showCartWidget)
     }
     const data={
         toggleMyDrawer,

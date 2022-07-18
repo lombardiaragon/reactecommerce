@@ -40,7 +40,7 @@ const Cart =()=>{
                             )
                         })} 
                     </div>
-                    <Card className="bg-warning cardResume">
+                    <Card className="bg-warning bg-opacity-75 cardResume">
                         <div className='h-100 w-100 d-flex flex-column justify-content-between'>
                             <Card.Header>
                                 <h5>RESUMEN DE MI PEDIDO</h5>

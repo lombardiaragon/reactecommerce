@@ -5,17 +5,19 @@ const CartContext=createContext()
 const CartProvider=({children})=>{
     const[cartList, setCartList]=useState([])
 
+  
     const addToCart=(product)=>{
-        setCartList([...cartList,product])
+        let isInCart=cartList.some((el)=>el.id===product.id)
+        if(!isInCart){
+            setCartList([...cartList,product])
+        }
     }
     const quitFromCart=(item)=>{
         setCartList(cartList.filter((el)=>el.id !== item.id))
     }
-    console.log(cartList)
+
     const mapPrices=cartList.map((el)=>el.price*el.quantitySelected)
     const totalAcc=mapPrices.reduce((acc,price)=>acc+price,0)
-
-    
 
     const data={
         cartList,
@@ -24,7 +26,6 @@ const CartProvider=({children})=>{
         quitFromCart,
         totalAcc
     }
-    console.log(cartList)
 
     return(
         <CartContext.Provider value={data}>

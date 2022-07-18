@@ -7,11 +7,10 @@ import EmptyCartWidget from "./EmtyCartWidget";
 
 const CartWidget=({toggleMyDrawer,showCartWidget})=> {
     const{cartList,quitFromCart,totalAcc}=useContext(CartContext)
-
   return (
        <>
         {showCartWidget && <div className='MyDrawerContainer d-flex' onClick={toggleMyDrawer}/>}
-        <div className={`MyDrawer overflow-scroll position-fixed d-flex flex-column text-dark bg-light w-25 ${showCartWidget && "MyDrawerActive"}`}>
+        <div className={`MyDrawer overflow-auto position-fixed d-flex flex-column text-dark bg-light w-25 ${showCartWidget && "MyDrawerActive"}`}>
             <div className="d-flex flex-column">
                 <div className="row bg-dark text-light d-flex flex-row justify-content-between align-items-center  py-3 px-2">
                     <span className="w-75 h4">MI CARRITO</span>
