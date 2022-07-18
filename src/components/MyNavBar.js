@@ -6,15 +6,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCartArrowDown,faUser} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import CartWidget from './CartWidget';
-import { useState } from 'react';
+import { useContext } from 'react';
+import CartWidgetContext from '../Context/CartWidgetContext';
+import CartContext from '../Context/CartContext';
+import Badge from 'react-bootstrap/Badge';
 
 
 const MyNavBar=()=>{
-    const[showCartWidget,setShowCartWidget]=useState(false)
-    const toggleMyDrawer=(e)=>{
-        setShowCartWidget(!showCartWidget)
-        console.log(showCartWidget)
-    }
+    const{toggleMyDrawer,showCartWidget}=useContext(CartWidgetContext)
+    const{cartList}=useContext(CartContext)
+
     return(
         <>
         <Navbar bg="dark" variant='dark' expand="lg" className='p-2'>
@@ -57,8 +58,9 @@ const MyNavBar=()=>{
                         <Link to={'/contacto'} className='text-decoration-none nav-link'>Contacto</Link>
                     </Nav>
                     <Nav className='w-100 d-flex align-items-center justify-content-end'>
-                        <Nav.Link className='d-flex align-items-center' onClick={toggleMyDrawer}>
+                        <Nav.Link className='d-flex align-items-center position-relative' onClick={toggleMyDrawer}>
                             <FontAwesomeIcon icon={faCartArrowDown} className='mx-1'/>Mi Carrito
+                            {cartList.length!==0 && <Badge bg="warning text-dark position-absolute top-0 start-0">{cartList.length}</Badge>}
                         </Nav.Link>
                         <Link to={'/'} className='text-decoration-none nav-link'><FontAwesomeIcon icon={faUser} className='mx-1'/>Mi Perfil</Link>
                     </Nav>

@@ -18,7 +18,7 @@ const Counter=({product})=>{
     product.quantitySelected=quantity
 
     return(
-        <div className="mt-4 d-flex justify-content-center align-items-center">
+        <div className="mt-md-0 d-flex justify-content-center align-items-center">
             <Button type="button" className="btn-dark" onClick={toRest} disabled={quantity===1}>-</Button>
             <span className="mx-3">{quantity}</span>
             <Button type="button" className="btn-dark" onClick={toAdd}>+</Button>

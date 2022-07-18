@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { useContext } from "react";
 import CartContext from '../Context/CartContext'
 import Counter from '../components/Counter';
+import BannerFooter from '../components/BannerFooter';
 const Cart =()=>{
     const{cartList,totalAcc,quitFromCart}=useContext(CartContext)
     console.log(cartList)
@@ -45,9 +46,9 @@ const Cart =()=>{
                                 <h5>RESUMEN DE MI PEDIDO</h5>
                             </Card.Header>
                             <div className='p-3 pb-0'>
-                                <p>Cantidad de productos en carrito: 5</p>
+                                <p>Cantidad de productos en carrito: {cartList.length}</p>
                                 <p>Entrega: Gratis</p>
-                                <p>TOTAL: ${totalAcc}</p>
+                                <p className='fs-5'>TOTAL: ${totalAcc}</p>
                             </div>
                             <Card.Footer>
                                 <Button className='btn-dark w-100'>IR A PAGAR</Button>                
@@ -57,6 +58,7 @@ const Cart =()=>{
                 </div>)
             }
         </div>
+        <BannerFooter/>
     </>
     )
 }

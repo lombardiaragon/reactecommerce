@@ -12,7 +12,7 @@ const ItemDetail=({product})=>{
             <div className=" w-50 d-flex justify-content-center p-4">
                 <img src={`/${pictureUrl}`} alt='imagen producto' className="ItemDetail__img rounded"/>
             </div>
-            <div className=" w-50 container p-4">
+            <div className=" w-50 container d-flex flex-column justify-content-around p-4">
                 <InfoItemDetail title={title} price={price}/>
                 <FormItemDetail/>
                 <ItemCount product={product}/>

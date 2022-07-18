@@ -3,6 +3,7 @@ import getProducts from "../Services/products.services"
 import { useEffect,useState } from "react"
 import { useParams } from "react-router-dom"
 import BannerFooter from "./BannerFooter"
+import Loader from "./Loader"
 
 const ItemListContainer=()=>{
     const[myProducts,setMyProducts]=useState([])
@@ -16,9 +17,12 @@ const ItemListContainer=()=>{
     },[category])
     return(
         <>
-        <div className="p-0">
-            <ItemList myProducts={myProducts}/>
-        </div>
+        {Object.keys(myProducts).length === 0 ?
+        <Loader/>:
+        (<div className="p-0">
+            <ItemList myProducts={myProducts}/> 
+        </div>)
+        }
         <BannerFooter/>
         </>
     )

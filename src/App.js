@@ -15,14 +15,18 @@ import Detail from './Pages/Detail';
 import ItemListContainer from './components/ItemListContainer';
 import { CartProvider } from './Context/CartContext';
 import { CounterProvider } from './Context/CounterContext';
+import {CartWidgetProvider} from './Context/CartWidgetContext';
+import InfoHeader from './components/InfoHeader';
 
 function App() {
   return (
+    <CartWidgetProvider>
     <CounterProvider>
     <CartProvider>
       <BrowserRouter>
         <MainContainerLayout>
           <HeaderLayout>
+            <InfoHeader/>
             <MyNavBar/>
           </HeaderLayout>
           <MainContentLayout>
@@ -42,6 +46,7 @@ function App() {
       </BrowserRouter>
     </CartProvider>
     </CounterProvider>
+    </CartWidgetProvider>
   )
 }
 
