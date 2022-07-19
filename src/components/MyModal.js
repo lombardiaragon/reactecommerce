@@ -11,11 +11,10 @@ const MyModal=(props)=> {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          Formulario de confirmación de compra
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
         <FormContact/>
       </Modal.Body>
     </Modal>

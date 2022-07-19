@@ -8,7 +8,6 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import UserProfile from './Pages/UserProfile';
 import NotFound from './Pages/NotFound';
-import Contact from './Pages/Contact';
 import Help from './Pages/Help';
 import Cart from './Pages/Cart';
 import Detail from './Pages/Detail';
@@ -33,7 +32,6 @@ function App() {
             <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='/productos/:category' element={<ItemListContainer/>}/>
-              <Route path='/contacto' element={<Contact/>}/>
               <Route path='/item/:id' element={<Detail/>}/>
               <Route path='/ayuda' element={<Help/>}/>
               <Route path='/miperfil' element={<UserProfile/>}/>

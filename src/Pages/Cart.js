@@ -11,8 +11,13 @@ const Cart =()=>{
     const[showCartModal,setShowCartModal]=useState(false)
     return(
         <>
-        <h4>Mi Carrito</h4>
+       
         <div className="w-100">
+            <div className='my-5 px-3'>
+                <h1 className=''>MI CARRITO</h1>
+                <i>¡COMPRÁ AHORA Y PAGÁ EN 6 CUOTAS! Podés pagar con tus tarjetas Visa, MasterCard o American Express hasta en 6 cuotas sin interés.</i>
+            </div>
+
             {cartList.length===0 ?
                 (<h3>NO HAY PRODUCTOS EN EL CARRITO</h3>)
                 :
@@ -21,7 +26,7 @@ const Cart =()=>{
                         {cartList.map((item)=>{
                             const{pictureUrl,title,id,price,quantitySelected}=item
                             return(
-                                <Card key={id} className='mb-2 cartCards w-100'>
+                                <Card key={id} className='mb-5 cartCards w-100'>
                                     <Card.Header className='d-flex justify-content-between'>
                                         <h5>{title}</h5>
                                         <Button onClick={()=>quitFromCart(item)} className='btn-close btn-secondary'></Button>
@@ -33,7 +38,7 @@ const Cart =()=>{
                                                 <Card.Text className='pe-3'>
                                                     With supporting text below as a natural lead-in to additional content.
                                                 </Card.Text>
-                                                <p className='text-center'>Precio: ${price*quantitySelected}</p>  
+                                                <p className='text-center'>${price*quantitySelected}</p>  
                                             </div>
                                             <Counter product={item}/>
                                         </div>
@@ -47,10 +52,10 @@ const Cart =()=>{
                             <Card.Header>
                                 <h5>RESUMEN DE MI PEDIDO</h5>
                             </Card.Header>
-                            <div className='p-3 pb-0'>
-                                <p>Cantidad de productos en carrito: {cartList.length}</p>
-                                <p>Entrega: Gratis</p>
-                                <p className='fs-5'>TOTAL: ${totalAcc}</p>
+                            <div className='px-3 h-100 d-flex flex-column justify-content-around'>
+                                <p className='mb-0'>Entrega: Gratis</p>
+                                <p className='fs-5 mb-0'>TOTAL <i>({cartList.length} productos)</i>: ${totalAcc}</p>
+                                <i>Pagá en 6 cuotas sin interés</i>
                             </div>
                             <Card.Footer>
                                 <Button className='btn-dark w-100' onClick={()=>setShowCartModal(!showCartModal)}>IR A PAGAR</Button>                

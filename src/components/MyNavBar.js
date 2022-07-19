@@ -55,7 +55,6 @@ const MyNavBar=()=>{
                             </Link> 
                         </NavDropdown>
                         <Link to={'/ayuda'} className='text-decoration-none nav-link'>Ayuda</Link>
-                        <Link to={'/contacto'} className='text-decoration-none nav-link'>Contacto</Link>
                     </Nav>
                     <Nav className='w-100 d-flex align-items-center justify-content-end'>
                         <Nav.Link className='d-flex align-items-center position-relative' onClick={toggleMyDrawer}>
