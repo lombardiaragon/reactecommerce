@@ -17,7 +17,7 @@ const CartProvider=({children})=>{
     }
 
     const mapPrices=cartList.map((el)=>el.price*el.quantitySelected)
-    const totalAcc=mapPrices.reduce((acc,price)=>acc+price,0)
+    const totalAcc=mapPrices.reduce((acc,price)=>acc+price,0)   
 
     const data={
         cartList,

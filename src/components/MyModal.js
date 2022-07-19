@@ -1,7 +1,24 @@
+import Modal from 'react-bootstrap/Modal';
+import FormContact from './FormContact';
 
-const MyModal=()=> {
+const MyModal=(props)=> {
   return (
-    <div>Modal</div>
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <FormContact/>
+      </Modal.Body>
+    </Modal>
   );
 }
 

@@ -1,12 +1,14 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CartContext from '../Context/CartContext'
 import Counter from '../components/Counter';
 import BannerFooter from '../components/BannerFooter';
+import MyModal from '../components/MyModal';
+
 const Cart =()=>{
     const{cartList,totalAcc,quitFromCart}=useContext(CartContext)
-    console.log(cartList)
+    const[showCartModal,setShowCartModal]=useState(false)
     return(
         <>
         <h4>Mi Carrito</h4>
@@ -51,13 +53,15 @@ const Cart =()=>{
                                 <p className='fs-5'>TOTAL: ${totalAcc}</p>
                             </div>
                             <Card.Footer>
-                                <Button className='btn-dark w-100'>IR A PAGAR</Button>                
+                                <Button className='btn-dark w-100' onClick={()=>setShowCartModal(!showCartModal)}>IR A PAGAR</Button>                
                             </Card.Footer>
                         </div>
                     </Card>
                 </div>)
             }
         </div>
+        {showCartModal && 
+        <MyModal  show={showCartModal} onHide={() => setShowCartModal(!showCartModal)}/>}
         <BannerFooter/>
     </>
     )

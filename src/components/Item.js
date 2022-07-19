@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import AddToCartBtn from "./AddToCartBtn"
 
+
 const Item=({product})=>{
     const{title,price,id,pictureUrl}=product
     const[showBuyingBtn,setShowBuyingBtn]=useState(false)
