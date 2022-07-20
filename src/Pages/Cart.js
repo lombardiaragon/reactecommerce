@@ -5,6 +5,9 @@ import CartContext from '../Context/CartContext'
 import Counter from '../components/Counter';
 import BannerFooter from '../components/BannerFooter';
 import MyModal from '../components/MyModal';
+import FormContact from '../components/FormContact';
+import Modal from 'react-bootstrap/Modal';
+import { Link } from 'react-router-dom';
 
 const Cart =()=>{
     const{cartList,totalAcc,quitFromCart}=useContext(CartContext)
@@ -12,14 +15,20 @@ const Cart =()=>{
     return(
         <>
        
-        <div className="w-100">
+        <div className="w-100 min-vh-100 d-flex flex-column justify-content-start align-items-center">
             <div className='my-5 px-3'>
                 <h1 className=''>MI CARRITO</h1>
                 <i>¡COMPRÁ AHORA Y PAGÁ EN 6 CUOTAS! Podés pagar con tus tarjetas Visa, MasterCard o American Express hasta en 6 cuotas sin interés.</i>
             </div>
 
             {cartList.length===0 ?
-                (<h3>NO HAY PRODUCTOS EN EL CARRITO</h3>)
+                (<div className='p-3 text-center card m-4 w-75 p-5'>
+                    <h3>NO HAY PRODUCTOS EN EL CARRITO</h3>
+                    <Link to={'/'}>
+                        <Button className='btn-secondary btn-lg m-auto mt-4'>AGREGAR PRODUCTOS</Button>
+                    </Link>
+                </div>
+                )
                 :
                 (<div className="d-flex flex-row justify-content-between p-3">
                     <div className="d-flex flex-column w-50">
@@ -66,7 +75,17 @@ const Cart =()=>{
             }
         </div>
         {showCartModal && 
-        <MyModal  show={showCartModal} onHide={() => setShowCartModal(!showCartModal)}/>}
+        <MyModal  show={showCartModal} onHide={() => setShowCartModal(!showCartModal)}>
+                <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                    Formulario de confirmación de compra
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <FormContact/>
+                </Modal.Body>
+        </MyModal>
+        }
         <BannerFooter/>
     </>
     )

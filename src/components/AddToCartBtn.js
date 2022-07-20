@@ -19,7 +19,7 @@ const AddToCartBtn=({product})=>{
 
     return(
         <>
-            <Button type='button' className="btn btn-warning row w-100 m-auto my-0"
+            <Button type='button' className="col btn btn-warning  my-0"
             onClick={()=>{addToCart(product);showMyToast()}}>
             Agregar al Carrito
             </Button>
