@@ -1,5 +1,4 @@
 import BannerFooter from "../components/BannerFooter"
-import ItemListContainer from "../components/ItemListContainer"
 import MyHero from "../components/MyHero"
 import ShopInfo from "../components/ShopInfo"
 import SlideBanner from "../components/SlideBanner"
@@ -13,7 +12,6 @@ const Home =()=>{
             <MyHero/>
             <div><SwiperCards/></div>
             <BannerFooter/>
-            {/* <ItemListContainer/> */}
         </>
 
     )
