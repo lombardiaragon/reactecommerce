@@ -48,9 +48,9 @@ const MyNavBar=()=>{
                                 </p>
                             </Link> 
                             <hr className="dropdown-divider"/>
-                            <Link to={'productos/pantalones'} className='text-decoration-none text-dark dropdown-item'>
+                            <Link to={'/productos'} className='text-decoration-none text-dark dropdown-item'>
                                 <p className='mb-0 px-2'> 
-                                On Sale 
+                                Todos 
                                 </p>
                             </Link> 
                         </NavDropdown>

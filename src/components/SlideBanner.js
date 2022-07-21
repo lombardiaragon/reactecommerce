@@ -6,7 +6,7 @@ const SlideBanner=()=>{
             <Carousel.Item interval={5000}>
             <img
                 className="d-block w-100 slideImg"
-                src="./tienda.jpg"
+                src="/tienda.jpg"
                 alt="First slide"
             />
             <Carousel.Caption className='bg-dark bg-opacity-75 rounded'>
@@ -17,7 +17,7 @@ const SlideBanner=()=>{
             <Carousel.Item interval={5000}>
             <img
                 className="d-block w-100 slideImg"
-                src="./tienda2.jpg"
+                src="/tienda2.jpg"
                 alt="Second slide"
             />
             <Carousel.Caption className='bg-dark bg-opacity-75 rounded'>
@@ -28,7 +28,7 @@ const SlideBanner=()=>{
             <Carousel.Item interval={5000}>
             <img
                 className="d-block w-100 slideImg"
-                src="./tienda1.jpg"
+                src="/tienda1.jpg"
                 alt="Third slide"
             />
             <Carousel.Caption className='bg-dark bg-opacity-75 rounded'>

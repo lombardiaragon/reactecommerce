@@ -1,6 +1,12 @@
+import SwiperCards from "../components/SwiperCards"
+
 const Help =()=>{
     return(
-        <div>Help</div>
+        <div>
+            HELP
+            <SwiperCards/>
+        </div>
+        
     )
 }
 export default Help

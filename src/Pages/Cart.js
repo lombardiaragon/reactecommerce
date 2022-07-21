@@ -12,19 +12,21 @@ import { Link } from 'react-router-dom';
 const Cart =()=>{
     const{cartList,totalAcc,quitFromCart}=useContext(CartContext)
     const[showCartModal,setShowCartModal]=useState(false)
+    const [success, setSuccess] = useState()
+
     return(
         <>
        
-        <div className="w-100 min-vh-100 d-flex flex-column justify-content-start align-items-center">
+        <div className="w-100 min-vh-100 d-flex flex-column justify-content-start">
             <div className='my-5 px-3'>
                 <h1 className=''>MI CARRITO</h1>
                 <i>¡COMPRÁ AHORA Y PAGÁ EN 6 CUOTAS! Podés pagar con tus tarjetas Visa, MasterCard o American Express hasta en 6 cuotas sin interés.</i>
             </div>
 
             {cartList.length===0 ?
-                (<div className='p-3 text-center card m-4 w-75 p-5'>
+                (<div className='p-5 text-center card m-auto mt-4 w-75'>
                     <h3>NO HAY PRODUCTOS EN EL CARRITO</h3>
-                    <Link to={'/'}>
+                    <Link to={'/productos'}>
                         <Button className='btn-secondary btn-lg m-auto mt-4'>AGREGAR PRODUCTOS</Button>
                     </Link>
                 </div>
@@ -82,7 +84,14 @@ const Cart =()=>{
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <FormContact/>
+                    {success ? 
+                        (<div>
+                            <p>Orden generada!</p>
+                            <p>Numero de orden: {success}</p>
+                        </div>)
+                    :
+                        (<FormContact succes={success} setSuccess={setSuccess}/>)
+                    }
                 </Modal.Body>
         </MyModal>
         }

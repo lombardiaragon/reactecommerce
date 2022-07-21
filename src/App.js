@@ -32,6 +32,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='/productos/:category' element={<ItemListContainer/>}/>
+              <Route path='/productos' element={<ItemListContainer/>}/>
               <Route path='/item/:id' element={<Detail/>}/>
               <Route path='/ayuda' element={<Help/>}/>
               <Route path='/miperfil' element={<UserProfile/>}/>

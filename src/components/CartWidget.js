@@ -14,7 +14,7 @@ const CartWidget=({toggleMyDrawer,showCartWidget})=> {
             <div className="d-flex flex-column">
                 <div className="row bg-dark text-light d-flex flex-row justify-content-between align-items-center  py-3 px-2">
                     <span className="w-75 h4">MI CARRITO</span>
-                    <Button type="button" className="h6 btn-close btn-close-white" aria-label="Close" onClick={toggleMyDrawer}></Button>
+                    <Button type="button" className="h6 btn-close btn-close-white" aria-label="Close" onClick={toggleMyDrawer}/>
                 </div>
                 <div className="d-flex flex-column ">
                     {cartList.length===0 ?

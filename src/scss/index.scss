@@ -30,15 +30,14 @@
   font-size: 16px;
 }
 
-
-
 @import "partials/vars";
+@import "partials/MyHero";
 @import "partials/Cart";
+@import 'partials/SwiperCards';
 @import "partials/Toasti";
 @import "partials/ItemDetailContainer";
 @import "partials/ItemDetail";
 @import "partials/CartWidget";
-@import "partials/ItemList";
 @import "partials/Item";
 @import "partials/ShopInfo";
 @import "~bootstrap/scss/bootstrap";

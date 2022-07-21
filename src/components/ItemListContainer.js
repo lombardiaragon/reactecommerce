@@ -4,6 +4,7 @@ import { useEffect,useState } from "react"
 import { useParams } from "react-router-dom"
 import BannerFooter from "./BannerFooter"
 import Loader from "./Loader"
+import SlideBanner from "./SlideBanner"
 
 const ItemListContainer=()=>{
     const[myProducts,setMyProducts]=useState([])
@@ -17,9 +18,10 @@ const ItemListContainer=()=>{
     },[category])
     return(
         <>
+        <SlideBanner/>
         {Object.keys(myProducts).length === 0 ?
         <Loader/>:
-        (<div className="p-0">
+        (<div className="p-0 min-vh-100">
             <ItemList myProducts={myProducts}/> 
         </div>)
         }

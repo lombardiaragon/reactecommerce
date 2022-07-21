@@ -8,7 +8,7 @@ const EmptyCartWidget=()=>{
     return(
         <div className="d-flex flex-column mt-5 align-items-center">
             <h5 className="mb-5 text-center">Su carrito está vacío</h5>
-            <Link to={'/'}>
+            <Link to={'/productos'}>
                 <Button className="btn-secondary btn-lg" onClick={toggleMyDrawer}>Agregar productos al carrito</Button>
             </Link>
         </div>
