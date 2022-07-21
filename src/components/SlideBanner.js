@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const SlideBanner=()=>{
     return(
-        <Carousel className='p-0 '>
+        <Carousel className='p-0'>
             <Carousel.Item interval={5000}>
             <img
                 className="d-block w-100 slideImg"
