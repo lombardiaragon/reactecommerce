@@ -16,6 +16,7 @@ const ItemListContainer=()=>{
             category? (setMyProducts(res.filter((el)=>el.category===category))) : setMyProducts(res)
         })
     },[category])
+    //se ejecuta en la fase de montaje o cuando se actualiza la category
     return(
         <>
         <SlideBanner/>

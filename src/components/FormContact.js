@@ -8,7 +8,7 @@ import CartContext from '../Context/CartContext';
 import db from '../Utils/FireBase.config'
 import { collection,addDoc } from 'firebase/firestore';
 
-const FormContact=({success,setSuccess})=>{
+const FormContact=({setSuccess})=>{
     const{totalAcc,cartList,setCartList}=useContext(CartContext)
     const [formValue, setFormValue] = useState({
         user: '',
@@ -52,7 +52,7 @@ const FormContact=({success,setSuccess})=>{
     }
 
     return(
-        <Form  onSubmit={handleSubmit}>
+        <Form  onSubmit={handleSubmit} className='p-3'>
             <Row className='mb-3'>
                 <Col>
                     <Form.Control 

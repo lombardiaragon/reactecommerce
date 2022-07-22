@@ -1,7 +1,9 @@
+import SwiperCards from './SwiperCards'
 const SliderProducts=()=>{
     return(
-        <div>
-            <h3>RELATED PRODUCTS</h3>
+        <div className='text-center border-top border-bottom my-5 py-5'>
+            <h3>NUEVAS ENTRADAS</h3>
+            <SwiperCards/>
         </div>
     )
 }

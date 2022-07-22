@@ -2,17 +2,17 @@ import BannerFooter from "../components/BannerFooter"
 import MyHero from "../components/MyHero"
 import ShopInfo from "../components/ShopInfo"
 import SlideBanner from "../components/SlideBanner"
-import SwiperCards from "../components/SwiperCards"
+import SliderProducts from "../components/SliderProducts"
 
 const Home =()=>{
     return(
-        <>
-            <SlideBanner/>
-            <ShopInfo/>
-            <MyHero/>
-            <div><SwiperCards/></div>
-            <BannerFooter/>
-        </>
+    <>
+    <SlideBanner/>
+    <ShopInfo/>
+    <MyHero/>
+    <SliderProducts/>
+    <BannerFooter/>
+    </>
 
     )
 }

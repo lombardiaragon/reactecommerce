@@ -4,7 +4,6 @@ const CartContext=createContext()
 
 const CartProvider=({children})=>{
     const[cartList, setCartList]=useState([])
-
   
     const addToCart=(product)=>{
         let isInCart=cartList.some((el)=>el.id===product.id)
