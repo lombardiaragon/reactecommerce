@@ -1,7 +1,7 @@
 const FooterLayout=()=>{
     return(
         <footer className=" py-5 bg-dark text-light">
-            <div className="col d-flex  flex-column flex-md-row border-bottom justify-content-around align-items-sm-start">
+            <div className="col d-flex  flex-column flex-md-row border-bottom justify-content-between px-3 px-md-5 align-items-sm-start">
                 <ul className=" d-flex flex-column  justify-content-around pb-3 mb-3">
                     <li>HOME</li>
                     <li>FAQS</li>
@@ -9,7 +9,7 @@ const FooterLayout=()=>{
                     <li>CONTACTO</li>
                     <li>RECURSOS</li>
                 </ul>
-                <div className="nav d-flex justify-content-around  pb-3 mb-3">
+                <div className="nav d-flex justify-content-around  p-3 mb-3">
                     <form>
                         <h5>Subscribe to our newsletter</h5>
                         <p>Monthly digest of what's new and exciting from us.</p>
