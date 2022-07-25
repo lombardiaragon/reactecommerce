@@ -1,5 +1,5 @@
 import CartContext from "../Context/CartContext"
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import Toasti from "./Toasti"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,6 @@ import CartWidgetContext from '../Context/CartWidgetContext';
 const AddToCartBtn=({product})=>{
     const{addToCart,toastToAdd,toastNotToAdd,showToastAdd,showToastNotAdd}=useContext(CartContext)
     const{toggleMyDrawer}=useContext(CartWidgetContext)
-
 
     return(
     <>
