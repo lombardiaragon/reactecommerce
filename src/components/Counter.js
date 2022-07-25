@@ -3,8 +3,8 @@ import { useState } from "react"
 
 
 const Counter=({product})=>{
-    const{stock,quantitySelected}=product
-    const [quantity,setQuantity]=useState(quantitySelected || 1)
+    const{stock}=product
+    const [quantity,setQuantity]=useState(1)
     const toAdd=()=>{
         if(quantity<stock){
             setQuantity(quantity+1)

@@ -5,7 +5,7 @@ import BannerFooter from '../components/BannerFooter';
 import { Link } from 'react-router-dom';
 import ModalBuyer from '../components/ModalBuyer';
 import CartListContainer from '../components/CartListContainer';
-import CartResume from '../components/CardResume';
+import CartResume from '../components/CartResume';
 import CartTitle from '../components/CartTitle';
 
 const Cart =()=>{
