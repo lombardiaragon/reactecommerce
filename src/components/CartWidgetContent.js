@@ -8,7 +8,7 @@ const CartWidgetContent=()=>{
     const{cartList,quitFromCart}=useContext(CartContext)
 
     return(
-    <div className="d-flex flex-column mt-2">
+    <div className="d-flex flex-column mt-2 px-3">
         {cartList.map((item)=>{
         const{title,pictureUrl,id,price,quantitySelected}=item
             return(

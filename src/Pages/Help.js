@@ -1,14 +1,20 @@
 import Button  from "react-bootstrap/Button"
+import AccordionHelp from "../components/AccordionHelp"
+import SwiperCards from "../components/SwiperCards"
 
 const Help =()=>{
     return(
-        <div className="vh-100 p-0 text-light">
-            <div className="d-flex flex-column justify-content-center align-items-center bg-secondary h-50">
+        <div className="col text-light">
+            <div className="helpTitle d-flex p-5 flex-column justify-content-center align-items-center bg-secondary">
                 <h1>¿NECESITAS AYUDA?</h1>
                 <div className="m-3 input-group input-group-lg d-flex w-75">
                     <input className="btn-lg form-control" placeholder="¿En qué te ayudamos?"/>
                     <Button className="btn-warning">Buscar</Button>
                 </div>
+            </div>
+            <AccordionHelp/>
+            <div className="my-5 border-top border-bottom">
+                <SwiperCards/>
             </div>
         </div>
         

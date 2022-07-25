@@ -1,13 +1,13 @@
 const FooterLayout=()=>{
     return(
-        <footer className=" row row-cols-1 py-5 bg-dark text-light ">
+        <footer className=" py-5 bg-dark text-light">
             <div className="col d-flex  flex-column flex-md-row border-bottom justify-content-around align-items-sm-start">
-                <ul className="nav d-flex flex-column  justify-content-around pb-3 mb-3">
-                    <li>.HOME</li>
-                    <li>.FAQS</li>
-                    <li>.REDES</li>
-                    <li>.CONTACTO</li>
-                    <li>.RECURSOS</li>
+                <ul className=" d-flex flex-column  justify-content-around pb-3 mb-3">
+                    <li>HOME</li>
+                    <li>FAQS</li>
+                    <li>REDES</li>
+                    <li>CONTACTO</li>
+                    <li>RECURSOS</li>
                 </ul>
                 <div className="nav d-flex justify-content-around  pb-3 mb-3">
                     <form>
