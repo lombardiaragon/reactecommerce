@@ -10,7 +10,7 @@
   transition:opacity .15s linear;
 }
 .MyDrawer{
-  min-width: 450px;
+  width: 450px;
   top: 0;
   right: 0;
   bottom:0;
@@ -26,8 +26,6 @@
   transform: none;
   transition: transform .3s ease-in-out;
 }
-
-
 
 .cartWidgetItems{
   display: flex;

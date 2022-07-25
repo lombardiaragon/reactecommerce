@@ -9,7 +9,7 @@ const CartWidget=({toggleMyDrawer,showCartWidget})=> {
   return (
        <>
         {showCartWidget && <div className='MyDrawerContainer d-flex' onClick={toggleMyDrawer}/>}
-        <div className={`MyDrawer overflow-auto position-fixed d-flex flex-column text-dark bg-light w-25 ${showCartWidget && "MyDrawerActive"}`}>
+        <div className={`MyDrawer overflow-auto position-fixed d-flex flex-column text-dark bg-light ${showCartWidget && "MyDrawerActive"}`}>
             <div className="d-flex flex-column">
                 <CartWidgetTitle/>
                 <div className="d-flex flex-column ">
