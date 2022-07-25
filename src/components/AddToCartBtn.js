@@ -6,38 +6,47 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Toast from 'react-bootstrap/Toast';
 import  Button  from 'react-bootstrap/Button';
 import CartWidgetContext from '../Context/CartWidgetContext';
-// import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 
 const AddToCartBtn=({product})=>{
-    const{addToCart}=useContext(CartContext)
-    const[showToast, setShowToast]=useState(false)
+    const{addToCart,toastToAdd,toastNotToAdd,showToastAdd,showToastNotAdd}=useContext(CartContext)
     const{toggleMyDrawer}=useContext(CartWidgetContext)
 
-    const showMyToast=()=>{
-        setShowToast(!showToast)
-    }
 
     return(
     <>
         <Button type='button' className="col btn btn-warning  my-0"
-        onClick={()=>{addToCart(product);showMyToast()}}>
+        onClick={()=>{addToCart(product)}}>
         Agregar al Carrito
         </Button>
-        {/* {showToast &&
+        {showToastAdd &&
         <Toasti>
-            <Toast className='position-fixed bottom-0 start-0 m-3 myToasti bg-light'
-                    onClose={() => showMyToast()} show={showToast} delay={1000} autohide>
-            <div className='toast-header d-flex justify-content-between'>
+            <Toast className='position-fixed overflow-hidden bottom-0 start-0 m-0 ms-1 mb-1 m-md-4 myToasti bg-light'
+                    onClose={() => toastToAdd()} show={showToastAdd} delay={3000} autohide>
+            <div className='toast-header d-flex justify-content-between p-3'>
                 <FontAwesomeIcon icon={faCheck} className='rounded'/>
-            <strong className="mx-2">Producto agregado al carrito</strong>
-                <button type="button" className="btn-close" onClick={showMyToast}></button>
+            <strong className="mx-2">PRODUCTO AGREGADO AL CARRITO</strong>
+                <button type="button" className="btn-close" onClick={toastToAdd}></button>
             </div>
             <Toast.Body className='text-center'>
                 <Button className='btn-success' onClick={toggleMyDrawer}>Ir al Carrito</Button>
             </Toast.Body>
             </Toast>
         </Toasti>
-        } */}
+        }
+        {showToastNotAdd &&
+        <Toasti>
+            <Toast className='position-fixed overflow-hidden bottom-0 start-0 m-0 ms-1 mb-1  m-md-4  myToasti bg-light'
+                    onClose={() => toastNotToAdd()} show={showToastNotAdd} delay={3000} autohide>
+            <div className='toast-header d-flex align-items-start justify-content-between p-3'>
+            <strong className="mx-2 text-danger">EL PRODUCTO YA SE ENCUENTRA EN EL CARRITO</strong>
+                <button type="button" className="btn-close" onClick={toastNotToAdd}></button>
+            </div>
+            <Toast.Body className='text-center'>
+                <Button className='btn-success' onClick={toggleMyDrawer}>Ir al Carrito</Button>
+            </Toast.Body>
+            </Toast>
+        </Toasti>
+        }
     </>
     )
 }

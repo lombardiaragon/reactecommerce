@@ -1,34 +1,28 @@
 import { createContext, useState } from "react";
-import Swal from 'sweetalert2';
 
 const CartContext=createContext()
 
 const CartProvider=({children})=>{
     const[cartList, setCartList]=useState([])
-  
+    const[showToastAdd, setShowToastAdd]=useState(false)
+    const[showToastNotAdd, setShowToastNotAdd]=useState(false)
+
+    const toastToAdd=()=>{
+        setShowToastAdd(!showToastAdd)
+    }
+    const toastNotToAdd=()=>{
+        setShowToastNotAdd(!showToastNotAdd)
+    }
     const addToCart=(product)=>{
         let isInCart=cartList.some((el)=>el.id===product.id)
         if(!isInCart){
             setCartList([...cartList,product])
-            // alert('nuevo agregado')
-            Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Producto agregado al carrito',
-                showConfirmButton: false,
-                timer: 1500
-              })
+            toastToAdd()
         }
         else{
-            // alert('ya estaba')
-            Swal.fire({
-                position: 'center',
-                icon: 'error',
-                title: 'El producto ya está en el carrito',
-                showConfirmButton: false,
-                timer: 1500
-              })
+            toastNotToAdd()
         }
+
     }
     const quitFromCart=(item)=>{
         setCartList(cartList.filter((el)=>el.id !== item.id))
@@ -42,7 +36,11 @@ const CartProvider=({children})=>{
         setCartList,
         addToCart,
         quitFromCart,
-        totalAcc
+        totalAcc,
+        toastToAdd,
+        toastNotToAdd,
+        showToastAdd,
+        showToastNotAdd
     }
 
     return(
@@ -54,3 +52,16 @@ const CartProvider=({children})=>{
 
 export default CartContext 
 export {CartProvider}
+
+//alert('nuevo agregado')
+                // Swal.fire({
+                //     position: 'center',
+                //     icon: 'success',
+                //     title: 'Producto agregado al carrito',
+                //     showConfirmButton: false,
+                //     timer: 2000,
+                //     showConfirmButton:true,
+                //     confirmButtonText:
+                //     '<Link>Ir al Carrito</Link>',
+                //     confirmButtonColor: '#3085d6',
+                // })
