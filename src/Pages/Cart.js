@@ -4,9 +4,9 @@ import CartContext from '../Context/CartContext'
 import BannerFooter from '../components/BannerFooter';
 import { Link } from 'react-router-dom';
 import ModalBuyer from '../components/ModalBuyer';
-import CartListContainer from '../components/CartListContainer';
-import CartResume from '../components/CartResume';
-import CartTitle from '../components/CartTitle';
+import CartListContainer from '../components/Cart/CartListContainer';
+import CartResume from '../components/Cart/CartResume';
+import CartTitle from '../components/Cart/CartTitle';
 
 const Cart =()=>{
     const{cartList}=useContext(CartContext)
@@ -26,12 +26,20 @@ const Cart =()=>{
                 </div>
                 )
                 :
-                (<div className="container-fluid p-3">
-                    <div className='row justify-content-around'>
-                        <CartListContainer/>
-                        <CartResume showCartModal={showCartModal} setShowCartModal={setShowCartModal}/>
+                (<div>
+                    <div className='d-flex justify-content-center mb-5'>
+                        <Link to={'/productos'}>
+                            <Button className='btn-dark btn-lg m-auto mt-4 px-5'>SEGUIR COMPRANDO</Button>
+                        </Link>
                     </div>
-                </div>)
+                    <div className="container-fluid p-3">
+                        <div className='row justify-content-around'>
+                            <CartListContainer/>
+                            <CartResume showCartModal={showCartModal} setShowCartModal={setShowCartModal}/>
+                        </div>
+                    </div>
+                </div>
+                )
             }
         </div>
         {showCartModal && 

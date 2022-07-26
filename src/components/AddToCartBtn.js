@@ -20,7 +20,7 @@ const AddToCartBtn=({product})=>{
         {showToastAdd &&
         <Toasti>
             <Toast className='position-fixed overflow-hidden bottom-0 start-0 m-0 ms-1 mb-1 m-md-4 myToasti bg-light'
-                    onClose={() => toastToAdd()} show={showToastAdd} delay={3000} autohide>
+                    onClose={() => toastToAdd()} show={showToastAdd} delay={2000} autohide>
             <div className='toast-header d-flex justify-content-between p-3'>
                 <FontAwesomeIcon icon={faCheck} className='rounded'/>
             <strong className="mx-2">PRODUCTO AGREGADO AL CARRITO</strong>
@@ -35,7 +35,7 @@ const AddToCartBtn=({product})=>{
         {showToastNotAdd &&
         <Toasti>
             <Toast className='position-fixed overflow-hidden bottom-0 start-0 m-0 ms-1 mb-1  m-md-4  myToasti bg-light'
-                    onClose={() => toastNotToAdd()} show={showToastNotAdd} delay={3000} autohide>
+                    onClose={() => toastNotToAdd()} show={showToastNotAdd} delay={2000} autohide>
             <div className='toast-header d-flex align-items-start justify-content-between p-3'>
             <strong className="mx-2 text-danger">EL PRODUCTO YA SE ENCUENTRA EN EL CARRITO</strong>
                 <button type="button" className="btn-close" onClick={toastNotToAdd}></button>

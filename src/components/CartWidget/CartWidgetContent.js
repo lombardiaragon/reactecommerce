@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap"
 import { useContext } from "react"
-import CartContext from "../Context/CartContext"
+import CartContext from "../../Context/CartContext"
 import { Badge } from "react-bootstrap"
 import CartWidgetResume from "./CartWidgetResume"
 

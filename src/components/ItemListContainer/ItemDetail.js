@@ -1,8 +1,7 @@
-import ItemCount from "./ItemCount"
-import SliderProducts from "./SliderProducts"
-import InfoItemDetail from "./InfoItemDetail"
-import FormItemDetail from "./FormItemDetail"
-
+import SliderProducts from "../SliderProducts"
+import InfoItemDetail from "../ItemListContainer/InfoItemDetail"
+import FormItemDetail from "../Forms/FormItemDetail"
+import ItemCount from '../ItemListContainer/ItemCount'
 const ItemDetail=({product})=>{
     const{title,pictureUrl,price}=product
 

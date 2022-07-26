@@ -1,6 +1,6 @@
 import Button from "react-bootstrap/Button"
 import { Link } from "react-router-dom"
-import CartWidgetContext from "../Context/CartWidgetContext"
+import CartWidgetContext from "../../Context/CartWidgetContext"
 import { useContext } from "react"
 
 const EmptyCartWidget=()=>{

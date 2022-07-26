@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { useContext } from 'react';
-import CartContext from '../Context/CartContext';
+import CartContext from '../../Context/CartContext';
 
 const CartResume=({showCartModal,setShowCartModal})=>{
     const{total,cartList}=useContext(CartContext)
@@ -18,7 +18,7 @@ const CartResume=({showCartModal,setShowCartModal})=>{
                     <i>Pagá en 6 cuotas sin interés</i>
                 </div>
                 <Card.Footer>
-                    <Button className='btn-dark m-2 w-100' onClick={()=>setShowCartModal(!showCartModal)}>IR A PAGAR</Button>
+                    <Button className='btn-dark m-2 w-100 p-2' onClick={()=>setShowCartModal(!showCartModal)}>IR A PAGAR</Button>
                 </Card.Footer>
             </div>
         </Card>                          

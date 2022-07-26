@@ -1,4 +1,4 @@
-import CartContext from "../Context/CartContext";
+import CartContext from "../../Context/CartContext";
 import { useContext } from "react";
 import EmptyCartWidget from "./EmtyCartWidget";
 import CartWidgetContent from "./CartWidgetContent";

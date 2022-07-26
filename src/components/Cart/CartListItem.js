@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap"
 import Button from "react-bootstrap/Button"
-import CartContext from "../Context/CartContext"
+import CartContext from "../../Context/CartContext"
 import { useContext, useState } from "react"
 
 const CartListItem=({item})=>{
@@ -19,8 +19,7 @@ const CartListItem=({item})=>{
         setStateQuantity(stateQuantity-1)
         toUpdateQuantity(item)
     }
-
-   
+    
     return(
         <Card className='mb-5 cartCards w-100'>
             <Card.Header className='d-flex justify-content-between'>

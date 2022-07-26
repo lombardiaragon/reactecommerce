@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 import { Button } from "react-bootstrap"
 import { useContext } from "react"
-import CartContext from "../Context/CartContext"
-import CartWidgetContext from "../Context/CartWidgetContext"
+import CartContext from "../../Context/CartContext"
+import CartWidgetContext from "../../Context/CartWidgetContext"
 
 const CartWidgetResume=()=>{
     const{total}=useContext(CartContext)

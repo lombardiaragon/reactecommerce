@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap"
 import { useContext } from "react"
-import CartWidgetContext from "../Context/CartWidgetContext"
+import CartWidgetContext from "../../Context/CartWidgetContext"
 
 const CartWidgetTitle=()=>{
     const{toggleMyDrawer}=useContext(CartWidgetContext)

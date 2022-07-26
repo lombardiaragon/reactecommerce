@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getProduct } from "../Services/products.services"
+import { getProduct } from "../../Services/products.services"
 import ItemDetail from './ItemDetail'
-import MyBreadCrumb from "./MyBreadCrumb"
-import Loader from "./Loader"
+import MyBreadCrumb from "../MyBreadCrumb"
+import Loader from "../Loader"
 
 const ItemDetailContainer=()=>{
     const {id}=useParams()

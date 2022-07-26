@@ -1,10 +1,10 @@
 import ItemList from "./ItemList"
-import getProducts from "../Services/products.services"
+import getProducts from "../../Services/products.services"
 import { useEffect,useState } from "react"
 import { useParams } from "react-router-dom"
-import BannerFooter from "./BannerFooter"
-import Loader from "./Loader"
-import SlideBanner from "./SlideBanner"
+import BannerFooter from "../BannerFooter"
+import Loader from "../Loader"
+import SlideBanner from "../SlideBanner"
 
 const ItemListContainer=()=>{
     const[myProducts,setMyProducts]=useState([])

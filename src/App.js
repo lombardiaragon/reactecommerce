@@ -3,7 +3,7 @@ import MainContainerLayout from './Layout/MainContainer.layout';
 import MainContentLayout from './Layout/MainContent.layout';
 import FooterLayout from './Layout/Footer.layout';
 import './scss/index.scss';
-import MyNavBar from './components/MyNavBar';
+import MyNavBar from './components/Header/MyNavBar';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import UserProfile from './Pages/UserProfile';
@@ -11,11 +11,11 @@ import NotFound from './Pages/NotFound';
 import Help from './Pages/Help';
 import Cart from './Pages/Cart';
 import Detail from './Pages/Detail';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { CartProvider } from './Context/CartContext';
 import { CounterProvider } from './Context/CounterContext';
 import {CartWidgetProvider} from './Context/CartWidgetContext';
-import InfoHeader from './components/InfoHeader';
+import InfoHeader from './components/Header/InfoHeader';
 
 function App() {
   return (

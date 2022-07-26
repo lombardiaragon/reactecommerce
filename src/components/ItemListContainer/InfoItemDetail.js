@@ -1,5 +1,4 @@
-import Rating from "./Rating"
-
+import Rating from "../Rating"
 const InfoItemDetail=({title,price})=>{
     return(
         <div className="row text-center text-lg-start row-cols-1 mt-lg-3">

@@ -1,4 +1,3 @@
-import '../scss/index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faTruckFast,faShop,faCreditCard,faCommentDollar} from '@fortawesome/free-solid-svg-icons'
 

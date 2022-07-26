@@ -1,7 +1,5 @@
-// import { useState } from "react"
-
-import Counter from "./Counter"
-import AddToCartBtn from "./AddToCartBtn"
+import Counter from "../Counter"
+import AddToCartBtn from "../AddToCartBtn"
 
 const ItemCount=({product})=>{
 

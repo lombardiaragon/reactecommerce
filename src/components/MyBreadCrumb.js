@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 const MyBreadCrumb=()=>{
     return(
-    <nav className="mt-3" aria-label="breadcrumb">
+    <nav className="mt-3 ps-3" aria-label="breadcrumb">
         <ol className="breadcrumb">
             <li className="breadcrumb-item"><Link to={'/'} className='text-dark'>Home</Link></li>
             <li className="breadcrumb-item"><Link to={'/productos'} className='text-dark'>Productos</Link></li>

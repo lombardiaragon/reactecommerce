@@ -4,8 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import { useContext } from 'react';
-import CartContext from '../Context/CartContext';
-import db from '../Utils/FireBase.config'
+import CartContext from '../../Context/CartContext';
+import db from '../../Utils/FireBase.config'
 import { collection,addDoc } from 'firebase/firestore';
 
 const FormContact=({setSuccess})=>{

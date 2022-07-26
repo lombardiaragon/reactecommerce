@@ -1,5 +1,5 @@
 import MyModal from "./MyModal"
-import FormContact from "./FormContact"
+import FormContact from "./Forms/FormContact"
 import Modal from 'react-bootstrap/Modal';
 
 

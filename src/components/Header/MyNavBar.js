@@ -5,10 +5,10 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCartArrowDown,faUser} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import { useContext } from 'react';
-import CartWidgetContext from '../Context/CartWidgetContext';
-import CartContext from '../Context/CartContext';
+import CartWidgetContext from '../../Context/CartWidgetContext';
+import CartContext from '../../Context/CartContext';
 import Badge from 'react-bootstrap/Badge';
 
 
