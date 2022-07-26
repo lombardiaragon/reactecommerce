@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 
 
 const ModalBuyer=({success,setSuccess,showCartModal,setShowCartModal})=>{
+    console.log('success',success)
     return(
         <MyModal  show={showCartModal} onHide={() => setShowCartModal(!showCartModal)}>
             <Modal.Header closeButton>
@@ -12,13 +13,13 @@ const ModalBuyer=({success,setSuccess,showCartModal,setShowCartModal})=>{
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {success ? 
+                {!success ? 
+                     (<FormContact setSuccess={setSuccess}/>) 
+                :
                     (<div>
                         <p>Orden generada!</p>
                         <p>Numero de orden: {success}</p>
                     </div>)
-                :
-                    (<FormContact setSuccess={setSuccess}/>)
                 }
             </Modal.Body>
         </MyModal>

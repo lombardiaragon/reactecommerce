@@ -9,7 +9,7 @@ import db from '../../Utils/FireBase.config'
 import { collection,addDoc } from 'firebase/firestore';
 
 const FormContact=({setSuccess})=>{
-    const{totalAcc,cartList,setCartList}=useContext(CartContext)
+    const{total,cartList,setCartList}=useContext(CartContext)
     const [formValue, setFormValue] = useState({
         user: '',
         phone: '',
@@ -29,7 +29,7 @@ const FormContact=({setSuccess})=>{
                 quantitySelected: item.quantitySelected
             }
         } ),
-        total: totalAcc
+        total: total
     })
 
 
@@ -40,7 +40,6 @@ const FormContact=({setSuccess})=>{
         setCartList([])
     }
     const handleChange=(e)=>{
-        console.log(e.target)
         setFormValue({...formValue, [e.target.name]: e.target.value})
     }
 
