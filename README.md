@@ -40,4 +40,5 @@ Carpetas:
 	- utils: archivo *firebaseConfig.js* para la configuración básica de *firebase*.
 
 
+![](/public/animationecommerce2.gif)
 ###End
