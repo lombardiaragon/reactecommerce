@@ -6,7 +6,7 @@ Instalar Node Js y una vez clonado el repositorio debes ejecutar el comando:
 Dicho comando instalará los los módulos necesarios y se creará la carpeta: *node_modules*
 
 # EcommerceFede.md
-![](/public/logoOscuroVerticalFede.png)
+![](/public/logoOscuroFedeHorizontal.png)
 
 
 
