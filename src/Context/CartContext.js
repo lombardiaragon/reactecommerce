@@ -3,7 +3,7 @@ import { createContext,useEffect, useState } from "react";
 const CartContext=createContext()
 
 const CartProvider=({children})=>{
-    const[cartList, setCartList]=useState([])
+    const[cartList, setCartList]=useState(JSON.parse(localStorage.getItem('products')) || [])
     const[showToastAdd, setShowToastAdd]=useState(false)
     const[showToastNotAdd, setShowToastNotAdd]=useState(false)
     const[total,setTotal]=useState(0)
@@ -18,6 +18,7 @@ const CartProvider=({children})=>{
     const addToCart=(product)=>{
         let isInCart=cartList.some((el)=>el.id===product.id)
         if(!isInCart){
+            localStorage.setItem('products', JSON.stringify([...cartList, product]))
             setCartList([...cartList,product])
             toastToAdd()
         }
