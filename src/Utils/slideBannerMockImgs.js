@@ -1,6 +1,6 @@
 const slideBannerImgs=[
 {
-image:"/3.jpg",
+image:"/tienda.jpg",
 info:"First slide",
 titleImg:"First slide label",
 textImg:"Nulla vitae elit libero, a pharetra augue mollis interdum."    
